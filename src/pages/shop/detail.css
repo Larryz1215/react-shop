@@ -1,0 +1,42 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detailDescription {
+  display: flex;
+  margin-top: 50px;
+}
+.detailLeft {
+  width: 350px;
+  margin: 0.5rem;
+}
+.detailLeft img {
+  width: 350px;
+}
+.detailRight {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.btnField {
+  display: flex;
+  width: 250px;
+  padding: 0.5rem;
+}
+.btnField button {
+  width: 60px;
+  font-size: 30px;
+  background: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+.btnField input {
+  width: 50px;
+  margin: 0 0.5rem;
+  text-align: center;
+}

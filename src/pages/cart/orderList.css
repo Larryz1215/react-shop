@@ -1,0 +1,37 @@
+.orderList {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.order {
+  margin-top: 1rem;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.486);
+  border-radius: 10px;
+  padding: 15px;
+}
+.order span {
+  font-size: 30px;
+}
+.order p {
+  font-size: 25px;
+  display: flex;
+  justify-content: end;
+}
+
+
+table thead tr{
+ width: 100%;
+  font-size: 25px;
+}
+
+table tbody {
+}
+table tbody td {
+  font-size: 20px;
+}

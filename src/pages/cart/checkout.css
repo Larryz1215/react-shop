@@ -1,0 +1,91 @@
+.checkoutForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutForm form {
+  width: 400px;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 25px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.486);
+}
+
+form .inputFiled {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  margin: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}
+.inputFiled label {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.inputFiled div {
+  width: 300px;
+  height: 3rem;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}
+
+form .buttonFiled {
+  display: flex;
+  justify-content: center;
+}
+.buttonFiled button {
+  width: 80%;
+  margin: 0.5rem 1rem;
+  padding: 0.6rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.buttonFiled .buttonBack {
+  background-color: rgb(16, 155, 23);
+  color: white;
+}
+.buttonFiled .buttonBack:hover {
+  font-size: 20px;
+  padding: 0.3rem;
+  background-color: green;
+}
+.buttonFiled .buttonSubmit {
+  background-color: rgb(241, 92, 87);
+  color: white;
+}
+.buttonFiled .buttonSubmit:hover {
+  font-size: 20px;
+  padding: 0.3rem;
+  background-color: rgb(226, 53, 47);
+}
+.orderHead {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.orderHead td {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+
+table{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: center;
+}
+td {
+  width: 120px;
+  padding: 1rem;
+}
+img {
+  width: 100px;
+}
