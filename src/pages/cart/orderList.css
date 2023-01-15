@@ -23,15 +23,40 @@
   display: flex;
   justify-content: end;
 }
-
-
-table thead tr{
- width: 100%;
+table{
+width: 100%;
+margin: 10px;
+}
+table thead {
+  width: 100%;
   font-size: 25px;
+  font-weight: 600;
 }
-
 table tbody {
-}
+    width: 100%;
+  }
 table tbody td {
   font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .order {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .order {
+    width: 350px;
+  }
+  .order p {
+    font-size: 15px;
+  }
+  table thead td {
+    font-size: 15px;
+  }
+
+  table tbody td {
+    font-size: 10px;
+  }
 }

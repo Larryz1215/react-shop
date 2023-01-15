@@ -15,14 +15,14 @@ export const OrderList = () => {
                 <tr>
                   <td>姓名</td>
                   <td>電話</td>
-                  <td>地址</td>
+                  <td style={{width:"60%"}}>地址</td>                  
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>{data.contact.fullName}</td>
                   <td>{data.contact.phone}</td>
-                  <td>{data.contact.address}</td>
+                  <td style={{width:"60%"}}>{data.contact.address}</td>
                 </tr>
               </tbody>
             </table>
@@ -45,10 +45,9 @@ export const OrderList = () => {
                     <td>{item.totalAmount}</td>
                   </tr>
                 </tbody>
-                
               ))}
-            </table>            
-            <p>總金額:${data.totalAmount}</p>            
+            </table>
+            <p>總金額:${data.totalAmount}</p>
           </div>
         ))}
       </>

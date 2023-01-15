@@ -9,15 +9,16 @@
   margin-top: 50px;
 }
 .detailLeft {
-  width: 350px;
+  width: 300px;
   margin: 0.5rem;
 }
 .detailLeft img {
-  width: 350px;
+  width: 300px;
 }
 .detailRight {
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 300px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,4 +40,22 @@
   width: 50px;
   margin: 0 0.5rem;
   text-align: center;
+}
+@media screen and (max-width: 600px){
+  .detail{
+  width: 100%;
+  }
+  .detailDescription{
+  width: 400px;
+  height: 450px;
+  }
+  .detailLeft img {
+    width: 200px;
+  }
+  .detailRight{
+  width: 180px;
+  } 
+  .btnField{
+  width: 150px;
+  }
 }
