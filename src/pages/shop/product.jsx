@@ -18,7 +18,7 @@ export const Product = (props) => {
         <p>${price}</p>
       </div>
       <button className="addBtn" onClick={() => addToCart(id)}>
-        購買
+       加入購物車
       </button>
     </div>
   );

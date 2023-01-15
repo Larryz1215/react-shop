@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
+import { ShopContext } from "../context/shopContext";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus, faUser, faBars } from "@fortawesome/free-solid-svg-icons";
+import Badge from "@mui/material/Badge";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import "./navbar.css";
 
 export const Navbar = () => {
+  const {cartItemInfo} = useContext(ShopContext);  
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -107,9 +110,11 @@ export const Navbar = () => {
         <Link to="/orderList">
           <FontAwesomeIcon icon={faUser} />
         </Link>
-        <Link to="/cart">
-          <FontAwesomeIcon icon={faCartPlus} />
-        </Link>
+        <Badge badgeContent={cartItemInfo.length} color="error">
+          <Link to="/cart">
+            <FontAwesomeIcon icon={faCartPlus} />
+          </Link>
+        </Badge>
       </div>
     </div>
   );

@@ -96,6 +96,7 @@ export const ShopContextProvider = (props) => {
     removeFromCart,
     updateCartItemCount,
     getTotalCartAmount,
+    deleteFromCart,
   };
   return (
     <ShopContext.Provider value={contextValue}>

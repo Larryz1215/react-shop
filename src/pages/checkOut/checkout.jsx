@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import {ShopContext } from "../../context/shopContext";
+import { ShopContext } from "../../context/shopContext";
 import { useNavigate } from "react-router-dom";
 import { Formik, Form, useField } from "formik";
 import * as yup from "yup";
@@ -47,7 +47,6 @@ export const Checkout = () => {
   }, [orders]);
   return (
     <div className="checkoutForm">
-      <button onClick={addOrder}></button>
       <Formik
         initialValues={initOrder}
         validationSchema={validate}

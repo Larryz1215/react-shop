@@ -35,6 +35,9 @@ function Detail() {
             />
             <button onClick={() => addToCart(thisProduct.id)}>+</button>
           </div>
+          <button className="addBtn" onClick={() => addToCart(thisProduct.id)}>
+            加入購物車
+          </button>
         </div>
       </div>
     </div>
