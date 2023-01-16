@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { ShopContext } from "../../context/shopContext";
 export const Product = (props) => {
   const { id, productName, price, productImage } = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
-  
+  const { addToCart } = useContext(ShopContext);
 
   return (
     <div className="product">
@@ -18,7 +17,7 @@ export const Product = (props) => {
         <p>${price}</p>
       </div>
       <button className="addBtn" onClick={() => addToCart(id)}>
-       加入購物車
+        加入購物車
       </button>
     </div>
   );

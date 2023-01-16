@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { ShopContext } from "../context/shopContext";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,8 +8,39 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import "./navbar.css";
 
+const LinksGroup = () => {
+  return (
+    <div className="linksGroups">
+      <NavLink
+        to="/3c"
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+      >
+        3C
+      </NavLink>
+      <NavLink
+        to="/clothing"
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+      >
+        Clothing
+      </NavLink>
+      <NavLink
+        to="/food"
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+      >
+        Food
+      </NavLink>
+      <NavLink
+        to="/daily"
+        className={({ isActive }) => (isActive ? "active" : "inactive")}
+      >
+        Daily
+      </NavLink>
+    </div>
+  );
+};
+
 export const Navbar = () => {
-  const {cartItemInfo} = useContext(ShopContext);  
+  const { cartItemInfo } = useContext(ShopContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -81,32 +112,7 @@ export const Navbar = () => {
             })}
           </Menu>
         </div>
-        <div className="linksGroups">
-          <NavLink
-            to="/3c"
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-          >
-            3C
-          </NavLink>
-          <NavLink
-            to="/clothing"
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-          >
-            Clothing
-          </NavLink>
-          <NavLink
-            to="/food"
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-          >
-            Food
-          </NavLink>
-          <NavLink
-            to="/daily"
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-          >
-            Daily
-          </NavLink>
-        </div>
+        <LinksGroup />
         <Link to="/orderList">
           <FontAwesomeIcon icon={faUser} />
         </Link>

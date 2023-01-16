@@ -51,7 +51,7 @@ export const ShopContextProvider = (props) => {
         )
       );
     }
-    console.log("data:", data);
+    
     console.log("cartItemInfo:", cartItemInfo);
   };
 

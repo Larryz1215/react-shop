@@ -21,10 +21,7 @@ export const GoTop = () => {
 
   return (
     <>
-      <div
-        className={showGoTop ? "" : "goTopHidden"}
-        onClick={handleSrollUp}
-      >
+      <div className={showGoTop ? "" : "goTopHidden"} onClick={handleSrollUp}>
         <button className={"goTop"}>
           <FontAwesomeIcon icon={faCaretUp} />
           <span>Top</span>
@@ -40,8 +37,6 @@ export const Shop = () => {
       <div className="shopTitle">
         <h2>Larry shop</h2>
       </div>
-
-      
       <div className="products">
         {PRODUCTS.map((product) => (
           <Product data={product} key={product.id} />
