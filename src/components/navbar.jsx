@@ -113,13 +113,19 @@ export const Navbar = () => {
           </Menu>
         </div>
         <LinksGroup />
-        <Link to="/orderList">
+        <NavLink
+          to="/orderList"
+          className={({ isActive }) => (isActive ? "active" : "inactive")}
+        >
           <FontAwesomeIcon icon={faUser} />
-        </Link>
-        <Badge badgeContent={cartItemInfo.length} color="error">
-          <Link to="/cart">
+        </NavLink>
+        <Badge badgeContent={cartItemInfo.length} color="success">
+          <NavLink
+            to="/cart"
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+          >
             <FontAwesomeIcon icon={faCartPlus} />
-          </Link>
+          </NavLink>
         </Badge>
       </div>
     </div>

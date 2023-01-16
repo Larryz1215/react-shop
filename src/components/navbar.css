@@ -28,6 +28,12 @@
 .links a:hover {
   color: rgb(236, 64, 64);
 }
+.links a.active{
+  color: rgb(243, 35, 35);
+}
+.links a.inactive {
+  color: #fff;
+}
 .linksGroups {
   width: 100%;
   display: flex;

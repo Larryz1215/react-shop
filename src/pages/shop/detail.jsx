@@ -25,16 +25,7 @@ function Detail() {
             <p>${thisProduct.price}</p>
           </div>
           <p>{thisProduct.description}</p>
-          <div className="btnField">
-            <button onClick={() => removeFromCart(thisProduct.id)}>-</button>
-            <input
-              value={data ? data.quantity : 0}
-              onChange={(e) =>
-                updateCartItemCount(Number(e.target.value), thisProduct.id)
-              }
-            />
-            <button onClick={() => addToCart(thisProduct.id)}>+</button>
-          </div>
+          <div className="btnField"></div>
           <button className="addBtn" onClick={() => addToCart(thisProduct.id)}>
             加入購物車
           </button>

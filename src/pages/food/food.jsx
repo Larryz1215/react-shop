@@ -1,7 +1,7 @@
 import React from "react";
-import { PRODUCTS} from "../../Products";
+import { PRODUCTS } from "../../Products";
 import { Product } from "../shop/product";
-
+import { GoTop } from "../../components/goTop";
 export const ShopFood = () => {
   return (
     <div className="shop">
@@ -12,8 +12,9 @@ export const ShopFood = () => {
       <div className="products">
         {PRODUCTS.map((product) => (
           <Product data={product} key={product.id} />
-        )).slice(6,9)}
+        )).slice(6, 9)}
       </div>
+      <GoTop />
     </div>
   );
 };

@@ -2,10 +2,9 @@ import React, { createContext, useState } from "react";
 import { PRODUCTS } from "../Products";
 export const ShopContext = createContext(null);
 
-
 export const ShopContextProvider = (props) => {
   const [cartItemInfo, setCartItemInfo] = useState([]);
-  
+
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     cartItemInfo.map((item) => {
@@ -51,7 +50,7 @@ export const ShopContextProvider = (props) => {
         )
       );
     }
-    
+
     console.log("cartItemInfo:", cartItemInfo);
   };
 
@@ -73,7 +72,7 @@ export const ShopContextProvider = (props) => {
   const deleteFromCart = (id) => {
     setCartItemInfo((cartItemInfo) =>
       cartItemInfo.filter((currentProduct) => {
-        return currentProduct.id != id;
+        return currentProduct.id !== id;
       })
     );
   };
