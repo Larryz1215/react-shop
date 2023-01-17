@@ -7,7 +7,7 @@ export const Product = (props) => {
 
   return (
     <div className="product">
-      <Link to={`/shop/${id}`}>
+      <Link to={`/shop/detail/${id}`}>
         <img src={productImage} />
       </Link>
       <div className="description">

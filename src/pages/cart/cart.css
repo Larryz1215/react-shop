@@ -29,9 +29,11 @@
 .countHandler {
   display: flex;
   justify-content: center;
+  padding: 5px;
 }
 .countHandler input {
   width: 40px;
+  margin: 5px;
   text-align: center;
   font-weight: bolder;
 }
@@ -44,6 +46,9 @@
   border-radius: 20px;
   border: none;
   cursor: pointer;
+}
+.countHandler button:hover{
+background: rgba(241, 231, 231, 0.692);
 }
 .checkout p {
   font-size: 1.5rem;
@@ -65,10 +70,14 @@
 .deleteItem {
   width: 50px;
   height: 100%;
+  margin-left: 15px;
   font-size: 35px;
   cursor: pointer;
   position: inherit;
   color: rgba(255, 0, 0, 0.699);
+}
+.deleteItem:hover {
+color:rgb(235, 92, 92)
 }
 
 @media screen and (max-width: 768px) {
@@ -85,26 +94,27 @@
 
 @media screen and (max-width: 600px) {
   .cartItem img {
-    width: 150px;
+    width: 120px;
   }
   .cartItem {
     width: 400px;
   }
   .cartItem .description {
-    width: 80px;
+    width: 100px;
   }
   .description p {
     font-size: 20px;
   }
+  .countHandler {
+    width: 100px;
+  }
   .countHandler button {
-    width: 20px;
+    width: 15px;
   }
   .countHandler input {
-    width: 25px;
+    width: 15px;
   }
   .deleteItem {
-    margin-left: 10px;
-    right: 20px;
     width: 20px;
   }
 }

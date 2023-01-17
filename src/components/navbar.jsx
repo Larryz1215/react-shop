@@ -6,6 +6,7 @@ import { faCartPlus, faUser, faBars } from "@fortawesome/free-solid-svg-icons";
 import Badge from "@mui/material/Badge";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Tooltip from "@mui/material/Tooltip";
 import "./navbar.css";
 
 const LinksGroup = () => {
@@ -113,19 +114,23 @@ export const Navbar = () => {
           </Menu>
         </div>
         <LinksGroup />
-        <NavLink
-          to="/orderList"
-          className={({ isActive }) => (isActive ? "active" : "inactive")}
-        >
-          <FontAwesomeIcon icon={faUser} />
-        </NavLink>
-        <Badge badgeContent={cartItemInfo.length} color="success">
+        <Tooltip title="Order" arrow>
           <NavLink
-            to="/cart"
+            to="/orderList"
             className={({ isActive }) => (isActive ? "active" : "inactive")}
           >
-            <FontAwesomeIcon icon={faCartPlus} />
+            <FontAwesomeIcon icon={faUser} />
           </NavLink>
+        </Tooltip>
+        <Badge badgeContent={cartItemInfo.length} color="secondary">
+          <Tooltip title="Cart" arrow>
+            <NavLink
+              to="/cart"
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+            >
+              <FontAwesomeIcon icon={faCartPlus} />
+            </NavLink>
+          </Tooltip>
         </Badge>
       </div>
     </div>
