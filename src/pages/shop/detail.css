@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  word-break: break-all;
 }
 .detailDescription {
   display: flex;
@@ -41,21 +42,12 @@
   margin: 0 0.5rem;
   text-align: center;
 }
-@media screen and (max-width: 600px){
-  .detail{
-  width: 100%;
-  }
-  .detailDescription{
-  width: 400px;
-  height: 450px;
-  }
-  .detailLeft img {
-    width: 200px;
-  }
-  .detailRight{
-  width: 180px;
-  } 
-  .btnField{
-  width: 150px;
+@media screen and (max-width: 600px) {
+  
+  .detailDescription {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
   }
 }
