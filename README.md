@@ -1,8 +1,8 @@
 <h4>React 購物網站</h4>
 
-<ul>
+<ul>使用工具
 <li>使用React框架，透過hook(useState、useEffect、useContext)管理資料。</li>
-<li>使用CSS Gird  製作RWD網頁。</li>
+<li>使用Tailwind CSS Gird  製作RWD網頁。</li>
 <li>使用 Material UI 製作輸入表格美化，且使用 Formik、yup 管理驗證輸入資料。</li>
 <li>使用localstorage儲存購物清單。</li>
 <li>使用 react-router-dom 製作分頁連結。</li>
