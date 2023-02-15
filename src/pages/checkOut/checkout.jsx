@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Form, useField } from "formik";
 import * as yup from "yup";
 import { TextField } from "@mui/material";
-import "./checkout.css";
 
 export const Checkout = () => {
   const [orders, setOrders] = useState(
@@ -42,58 +41,70 @@ export const Checkout = () => {
     console.log("orders:", orders);
   };
 
+  const handleSubmit = async (values) => {
+    addOrder(values, cartItemInfo);
+    await new Promise((r) => setTimeout(r, 500));
+    setCartItemInfo([]);
+    navigate("/orderlist");
+  };
+
   useEffect(() => {
     localStorage.setItem("orders", JSON.stringify(orders));
   }, [orders]);
   return (
-    <div className="checkoutForm">
+    <div className="flex flex-col justify-center items-center h-[80vh] ">
       <Formik
         initialValues={initOrder}
         validationSchema={validate}
-        onSubmit={async (values) => {
-          addOrder(values, cartItemInfo);
-          await new Promise((r) => setTimeout(r, 500));
-          setCartItemInfo([]);
-          navigate("/orderlist");
-        }}
+        onSubmit={handleSubmit}
       >
-        <Form>
-          <div className="inputFiled">
-            <label htmlFor="fullName">姓名</label>
+        <Form className="w-[400px] p-4 rounded-3xl shadow-[0_3px_15px] shadow-gray-500">
+          <div className="flex justify-center items-center my-8 h-12">
+            <label className="text text-2xl font-bold mr-2" htmlFor="fullName">
+              姓名
+            </label>
             <InputField
+              className="w-[300px]"
               type="text"
               name="fullName"
               id="fullName"
               placeholder="請輸入姓名..."
             />
           </div>
-          <div className="inputFiled">
-            <label htmlFor="phone">電話</label>
+          <div className="flex justify-center items-center my-8 h-12">
+            <label className="text text-2xl font-bold mr-2" htmlFor="phone">
+              電話
+            </label>
             <InputField
+              className="w-[300px]"
               type="text"
               name="phone"
               id="phone"
               placeholder="請輸入電話..."
             />
           </div>
-          <div className="inputFiled">
-            <label htmlFor="addtess">地址</label>
+          <div className="flex justify-center items-center my-8 h-12">
+            <label className="text text-2xl font-bold mr-2">地址</label>
             <InputField
+              className="w-[300px]"
               type="text"
               name="address"
               placeholder="請輸入地址..."
               id="address"
             />
           </div>
-          <div className="buttonFiled">
+          <div className="flex justify-center">
             <button
               type="button"
-              className="buttonBack"
+              className="text text-xl w-1/2 bg-green-600 text-white p-2 m-2 rounded-2xl hover:text-2xl hover:bg-green-700"
               onClick={() => navigate("/cart")}
             >
               返回
             </button>
-            <button type="submit" className="buttonSubmit">
+            <button
+              type="submit"
+              className="text text-xl w-1/2 bg-red-400 text-white p-2 m-2 rounded-2xl hover:text-2xl hover:bg-red-600"
+            >
               送出
             </button>
           </div>

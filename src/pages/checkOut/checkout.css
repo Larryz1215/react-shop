@@ -75,17 +75,3 @@ form .buttonFiled {
   padding: 0.5rem;
 }
 
-
-table{
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  align-items: center;
-}
-td {
-  width: 120px;
-  padding: 1rem;
-}
-img {
-  width: 100px;
-}

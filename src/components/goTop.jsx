@@ -4,7 +4,7 @@ import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 export const GoTop = () => {
   const [showGoTop, setShowGoTop] = useState(false);
-
+  
   const handleVisibleButton = () => {
     setShowGoTop(window.pageYOffset > 80);
   };
@@ -17,8 +17,8 @@ export const GoTop = () => {
   }, []);
 
   return (
-    <div className={showGoTop ? "" : "goTopHidden"} onClick={handleSrollUp}>
-      <button className={"goTop"}>
+    <div className={showGoTop ? "" : "hidden"} onClick={handleSrollUp}>
+      <button className="flex flex-col justify-center items-center text-xl w-14 h-14 right-10 bottom-10 fixed border-2 border-gray-400 rounded-full hover:bg-blue-400 hover:text-white">
         <FontAwesomeIcon icon={faCaretUp} />
         <span>Top</span>
       </button>
