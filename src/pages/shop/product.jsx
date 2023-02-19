@@ -6,14 +6,12 @@ export const Product = (props) => {
   const { addToCart } = useContext(ShopContext);
 
   return (
-    <div className="flex flex-col justify-center items-center w-60 h-60 my-24 group">
+    <div className="flex flex-col justify-center items-center w-60 my-24 group">
       <Link to={`/shop/detail/${id}`}>
-        <img className="w-60 group-hover:opacity-90" src={productImage} />
+        <img className="w-60 group-hover:opacity-90 group-hover:scale-110" src={productImage} />
       </Link>
-      <div className="text text-center group-hover:text-blue-600">
-        <p>
-          <b>{productName}</b>
-        </p>
+      <div className="text text-center my-5 group-hover:text-blue-600">
+        <b>{productName}</b>
         <p>${price}</p>
       </div>
       <button
