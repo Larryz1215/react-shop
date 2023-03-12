@@ -11,9 +11,10 @@ import { ShopFood } from "./pages/food/food";
 import { ShopDaily } from "./pages/daily/daily";
 import { Checkout } from "./pages/checkOut/checkout";
 import { OrderList } from "./pages/orderList/orderList";
+import { Bottom } from "./components/bottom";
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col w-full min-h-screen justify-between">
       <ShopContextProvider>
         <Router>
           <Navbar />
@@ -27,8 +28,9 @@ function App() {
             <Route path="/shop/detail/:productId" element={<Detail />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/orderlist" element={<OrderList />} />
-          </Routes>          
+          </Routes>
         </Router>
+        <Bottom />
       </ShopContextProvider>
     </div>
   );

@@ -5,7 +5,7 @@ import { GoTop } from "../../components/goTop";
 
 export const ShopDaily = () => {
   return (
-    <div className="shop">
+    <div className="flex flex-col mb-5">
       <div className="text text-5xl text-center mt-10">Daily</div>
 
       <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 place-items-center">

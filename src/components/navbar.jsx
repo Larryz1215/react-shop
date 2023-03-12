@@ -81,8 +81,8 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center h-[60px] w-full sticky bg-blue-500 z-10 top-0">
-      <div className="flex w-full justify-between items-center mx-8 max-sm:w-full">
+    <div className="flex items-center w-full sticky bg-blue-500 z-10 top-0">
+      <div className="flex w-full h-[60px] justify-between items-center mx-8 max-sm:w-full">
         <Link className="text-3xl text-white hover:text-red-400" to="/">
           Shop
         </Link>

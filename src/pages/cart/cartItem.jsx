@@ -30,7 +30,7 @@ export const CartItem = (props) => {
           onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
         />
         <button
-          className="w-10 text-5xl mx-2 bg-white hover:bg-gray-200 max-sm:w-4 max-sm:text-xl"
+          className="w-10 text-5xl mx-2 bg-white rounded-full hover:bg-gray-200 max-sm:w-4 max-sm:text-xl"
           onClick={() => addToCart(id)}
         >
           +
