@@ -18,7 +18,7 @@ export const GoTop = () => {
 
   return (
     <div className={showGoTop ? "" : "hidden"} onClick={handleSrollUp}>
-      <button className="flex flex-col justify-center items-center text-xl w-14 h-14 right-5 bottom-24 fixed border-2 border-gray-400 rounded-full  hover:text-blue-500">
+      <button className="flex flex-col justify-center items-center text-xl w-14 h-14 right-5 bottom-24 fixed border-2 border-slate-800 rounded-full  hover:text-blue-500 dark:bg-white">
         <FontAwesomeIcon icon={faCaretUp} />
         <span>Top</span>
       </button>

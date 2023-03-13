@@ -9,7 +9,7 @@ function Detail() {
   const thisProduct = PRODUCTS.find((prod) => prod.id == productId);
 
   return (
-    <div className="flex flex-col justify-center items-center break-all">
+    <div className="flex flex-col justify-center items-center break-all bg-slate-100">
       <div className="mt-10 font-bold text-3xl">
         <h1>Product Detail</h1>
       </div>
@@ -24,7 +24,7 @@ function Detail() {
           </div>          
           <p  className="text max-md:text-sm max-sm:text-sm">{thisProduct.description}</p>       
           <button
-            className="border-2 border-black rounded-3xl p-1 w-4/5 bottom-0 absolute hover:bg-black hover:text-white"
+            className="border-2 border-black rounded-3xl p-1 w-4/5 bottom-2 absolute hover:bg-black hover:text-white"
             onClick={() => addToCart(thisProduct.id)}
           >
             加入購物車

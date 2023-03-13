@@ -9,11 +9,11 @@ export const CartItem = (props) => {
     useContext(ShopContext);
   return (
     <div
-      className="flex items-center w-[650px] h-[200px] m-7 p-3 shadow-[0px_3px_15px_gray] rounded-3xl  max-md:w-[560px] max-sm:w-[380px]"
+      className="flex items-center w-[650px] h-[200px] m-7 p-3 shadow-[0px_3px_15px_gray] rounded-3xl  max-md:w-[560px] max-sm:w-[380px] dark:bg-white"
       key={id}
     >
       <img className="w-[180px] max-sm:w-32" src={productImage} />
-      <div className="w-full text-xl font-bold max-md:w-[120px] max-sm:w-24 max-sm:text-sm">
+      <div className="w-full ml-5 text-xl font-bold max-md:w-[120px] max-sm:w-24 max-sm:text-sm">
         <h4>{productName}</h4>
         <p>$ {price}</p>
       </div>

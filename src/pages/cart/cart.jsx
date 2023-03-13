@@ -9,7 +9,7 @@ export const Cart = () => {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-center items-center mt-12 animate-fadeIn">
-      <div className="mt-5 text-4xl">你的購物車</div>
+      <div className="mt-5 text-4xl dark:text-white">你的購物車</div>
       <div>
         {cartItemInfo.map((product) => {
           console.log("data", product);
@@ -18,7 +18,7 @@ export const Cart = () => {
       </div>
       {totalAmount > 0 ? (
         <div>
-          <p className="text text-2xl">總金額:${totalAmount}</p>
+          <p className="text text-2xl dark:text-white">總金額:${totalAmount}</p>
           <button
             className="w-40 h-12 m-3 bg-green-600 text-white rounded-2xl"
             onClick={() => navigate("/")}
@@ -33,7 +33,7 @@ export const Cart = () => {
           </button>
         </div>
       ) : (
-        <h1>購物車是空的</h1>
+        <h1 className="text text-2xl mt-5 dark:text-white">購物車是空的</h1>
       )}
     </div>
   );

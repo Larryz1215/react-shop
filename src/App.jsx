@@ -14,7 +14,7 @@ import { OrderList } from "./pages/orderList/orderList";
 import { Bottom } from "./components/bottom";
 function App() {
   return (
-    <div className="flex flex-col w-full min-h-screen justify-between">
+    <div className="flex flex-col w-full min-h-screen justify-between dark:bg-slate-800">
       <ShopContextProvider>
         <Router>
           <Navbar />

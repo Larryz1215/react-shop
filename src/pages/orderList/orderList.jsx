@@ -10,7 +10,7 @@ export const OrderList = () => {
       {order != null ? (
         order.map((data, i) => (
           <div
-            className="flex flex-col justify-center items-center  m-2 max-md:w-[600px] max-sm:w-[480px]"
+            className="flex flex-col justify-center items-center  m-2 max-md:w-[600px] max-sm:w-[440px]"
             key={uuidv4()}
           >
             <Accordion>
