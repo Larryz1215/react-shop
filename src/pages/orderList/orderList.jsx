@@ -10,7 +10,7 @@ export const OrderList = () => {
       {order != null ? (
         order.map((data, i) => (
           <div
-            className="flex flex-col justify-center items-center  mx-10 max-md:w-[600px] max-sm:w-[320px]"
+            className="flex flex-col justify-center items-center  mx-5 max-md:w-[600px] max-sm:w-[360px]"
             key={uuidv4()}
           >
             <Accordion>
@@ -23,24 +23,24 @@ export const OrderList = () => {
                   訂單{i + 1}
                 </Typography>
               </AccordionSummary>
-              <hr/>
-              <table className="m-4 w-[500px]  max-sm:w-[320px]">
-                <thead className="w-full">
-                  <tr className="text-xl">
-                    <td>姓名</td>
-                    <td>電話</td>
-                    <td className="w-3/5">地址</td>
-                  </tr>
-                </thead>
-                <tbody className="w-full">
-                  <tr className="text-xl">
-                    <td>{data.contact.fullName}</td>
-                    <td>{data.contact.phone}</td>
-                    <td className="w-3/5">{data.contact.address}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <hr/>
+              <hr />
+              <div className="m-4 w-[500px]  max-sm:w-[320px]">
+                <div className="text-xl space-y-3">
+                  <div className="flex flex-row justify-between">
+                    <p>姓名:</p>
+                    <p>{data.contact.fullName}</p>
+                  </div>
+                  <div className="flex flex-row justify-between">
+                    <p>電話:</p>
+                    <p>{data.contact.phone}</p>
+                  </div>
+                  <div className="flex flex-row justify-between">
+                    <p>地址:</p>
+                    <p>{data.contact.address}</p>
+                  </div>
+                </div>
+              </div>
+              <hr />
               <table className="m-4 w-[500px] max-sm:w-[320px]">
                 <thead>
                   <tr className="text text-xl max-sm:text-sm">
