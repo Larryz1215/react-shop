@@ -10,7 +10,7 @@ export const OrderList = () => {
       {order != null ? (
         order.map((data, i) => (
           <div
-            className="flex flex-col justify-center items-center  m-2 max-md:w-[600px] max-sm:w-[440px]"
+            className="flex flex-col justify-center items-center  mx-10 max-md:w-[600px] max-sm:w-[320px]"
             key={uuidv4()}
           >
             <Accordion>
@@ -24,7 +24,7 @@ export const OrderList = () => {
                 </Typography>
               </AccordionSummary>
               <hr/>
-              <table className="m-4 w-[500px]  max-sm:w-[400px]">
+              <table className="m-4 w-[500px]  max-sm:w-[320px]">
                 <thead className="w-full">
                   <tr className="text-xl">
                     <td>姓名</td>
@@ -41,7 +41,7 @@ export const OrderList = () => {
                 </tbody>
               </table>
               <hr/>
-              <table className="m-4 w-[500px] max-sm:w-[400px]">
+              <table className="m-4 w-[500px] max-sm:w-[320px]">
                 <thead>
                   <tr className="text text-xl max-sm:text-sm">
                     <td>商品</td>
