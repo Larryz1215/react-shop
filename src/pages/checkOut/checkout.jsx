@@ -58,7 +58,7 @@ export const Checkout = () => {
         validationSchema={validate}
         onSubmit={handleSubmit}
       >
-        <Form className="w-[400px] p-4 rounded-3xl shadow-[0_3px_15px] shadow-gray-500">
+        <Form className="w-[400px] p-4 rounded-3xl shadow-[0_3px_15px] shadow-gray-500 dark:bg-slate-200">
           <div className="flex justify-center items-center my-8 h-12">
             <label className="text text-2xl font-bold mr-2" htmlFor="fullName">
               姓名
