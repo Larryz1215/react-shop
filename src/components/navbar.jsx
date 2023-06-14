@@ -1,14 +1,16 @@
 import React, { useState, useContext } from "react";
 import { ShopContext } from "../context/shopContext";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus, faUser, faBars } from "@fortawesome/free-solid-svg-icons";
+import { Member } from "../pages/member/member";
 import Badge from "@mui/material/Badge";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 const LinksGroup = () => {
   const activeLink = "mx-6 text-3xl text-red-600";
@@ -45,7 +47,7 @@ const LinksGroup = () => {
 };
 
 export const Navbar = () => {
-  const { cartItemInfo } = useContext(ShopContext);
+  const { cartItemInfo, isLogin } = useContext(ShopContext);
   const [darkMode, setDarkMode] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -104,8 +106,8 @@ export const Navbar = () => {
           Shop
         </Link>
         <div className="text text-[25px] text-white cursor-pointer hidden max-sm:block dark:text-white">
-          <FontAwesomeIcon
-            icon={faBars}
+          <MenuOutlinedIcon
+            sx={{ fontSize: 30 }}
             id="basic-button"
             aria-controls={open ? "basic-menu" : undefined}
             aria-haspopup="true"
@@ -137,32 +139,34 @@ export const Navbar = () => {
           {darkMode ? (
             <DarkModeIcon
               sx={{ fontSize: 30 }}
-              className="text text-white text-2xl"
+              className="text text-white text-2xl cursor-pointer"
               onClick={handleThemeSwitch}
             />
           ) : (
             <LightModeIcon
-              className="text-white"
+              className="text-white cursor-pointer"
               sx={{ fontSize: 30 }}
               onClick={handleThemeSwitch}
             />
+          )}          
+          {isLogin ? (
+            <Member />
+          ) : (
+            <Tooltip title="Login" arrow>
+              <AccountCircleIcon
+                onClick={() => navigate("/login")}
+                className="text text-white dark:text-white cursor-pointer"
+                sx={{ fontSize: 30 }}
+              />
+            </Tooltip>
           )}
-
-          <Tooltip title="Order" arrow>
-            <NavLink
-              to="/orderList"
-              className="text-2xl text-white dark:text-white "
-            >
-              <FontAwesomeIcon icon={faUser} />
-            </NavLink>
-          </Tooltip>
           <Badge badgeContent={cartItemInfo.length} color="secondary">
             <Tooltip title="Cart" arrow>
               <NavLink
                 to="/cart"
                 className="text-2xl text-white dark:text-white"
               >
-                <FontAwesomeIcon icon={faCartPlus} />
+                <ShoppingCartCheckoutIcon sx={{ fontSize: 30 }} />
               </NavLink>
             </Tooltip>
           </Badge>

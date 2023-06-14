@@ -4,6 +4,7 @@ export const ShopContext = createContext(null);
 
 export const ShopContextProvider = (props) => {
   const [cartItemInfo, setCartItemInfo] = useState([]);
+  const [isLogin, setIsLogin] = useState(false);
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -96,6 +97,8 @@ export const ShopContextProvider = (props) => {
     updateCartItemCount,
     getTotalCartAmount,
     deleteFromCart,
+    isLogin,
+    setIsLogin,
   };
   return (
     <ShopContext.Provider value={contextValue}>

@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ShopContext } from "../../context/shopContext";
+import { useNavigate } from "react-router-dom";
 import { Accordion, AccordionSummary, Typography } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { v4 as uuidv4 } from "uuid";
 export const OrderList = () => {
   const order = JSON.parse(localStorage.getItem("orders"));
-
+  const navigate = useNavigate();
+  const { isLogin } = useContext(ShopContext);
   return (
     <>
-      {order != null ? (
+      {order != null && isLogin ? (
         order.map((data, i) => (
           <div
             className="flex flex-col justify-center items-center  mx-5 max-md:w-[600px] max-sm:w-[360px]"
@@ -68,7 +71,19 @@ export const OrderList = () => {
           </div>
         ))
       ) : (
-        <h3>查無訂購清單</h3>
+        <div className="flex flex-col justify-center items-center space-y-5  mx-5 max-md:w-[600px] max-sm:w-[360px]">
+          <h1>請登入會員</h1>
+          <button
+            className="text text-white bg-red-600 p-3 rounded-xl"
+            onClick={() => {
+              setTimeout(() => {
+                navigate("/login");
+              }, 1000);
+            }}
+          >
+            會員登入
+          </button>
+        </div>
       )}
     </>
   );

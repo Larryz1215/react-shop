@@ -11,6 +11,7 @@ import { ShopFood } from "./pages/food/food";
 import { ShopDaily } from "./pages/daily/daily";
 import { Checkout } from "./pages/checkOut/checkout";
 import { OrderList } from "./pages/orderList/orderList";
+import { Login } from "./pages/member/login";
 import { Bottom } from "./components/bottom";
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/shop/detail/:productId" element={<Detail />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/orderlist" element={<OrderList />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Router>
         <Bottom />
