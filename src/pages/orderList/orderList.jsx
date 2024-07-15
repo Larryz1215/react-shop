@@ -66,7 +66,7 @@ export const OrderList = () => {
                 ))}
               </table>
               <div className="flex  justify-end text-2xl max-sm:text-lg p-2">
-                <p>總金額:${data.totalAmount}</p>
+                <p>總金額: ${data.totalAmount}</p>
               </div>
             </Accordion>
           </div>
