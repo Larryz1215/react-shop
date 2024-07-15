@@ -9,6 +9,7 @@ import Tooltip from "@mui/material/Tooltip";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ListIcon from "@mui/icons-material/List";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
@@ -148,13 +149,13 @@ export const Navbar = () => {
               sx={{ fontSize: 30 }}
               onClick={handleThemeSwitch}
             />
-          )}          
+          )}
           {isLogin ? (
             <Member />
           ) : (
-            <Tooltip title="Login" arrow>
-              <AccountCircleIcon
-                onClick={() => navigate("/login")}
+            <Tooltip title="orderList" arrow>
+              <ListIcon
+                onClick={() => navigate("/orderList")}
                 className="text text-white dark:text-white cursor-pointer"
                 sx={{ fontSize: 30 }}
               />
