@@ -8,7 +8,7 @@ export const Shop = () => {
     <>
       <div className="mt-10 text-center text-5xl grow dark:text-white">
         <h2>Larry shop</h2>
-        <h3>test</h3>
+        {/* <h3>test</h3> */}
       </div>
       <div className="grid grid-cols-3  max-lg:grid-cols-2 max-sm:grid-cols-1 place-items-center">
         {PRODUCTS.map((product) => (
